@@ -1,0 +1,147 @@
+Java8 features.
+
+1. Lambda expression
+2. Functional interfaces
+3. Method reference
+4. Stream API
+5. Optional
+6. default and static methods in interface.
+
+1. Functional Interface:
+A functional interface can contains only one abstract method then we can say that
+interface is called functional interface.
+
+How to create ?
+
+@FunctionalInterface
+interface InterfaceName{
+
+public abstract void myMethod();
+
+// can contains default and static methods.
+
+}
+
+Abstraction: hiding internal things and showing necessary things.
+
+How to achieve abstraction: using interfaces and abstract classes.
+
+when should we use interfaces :
+
+If we want to achieve 100% abstraction then we have use interfaces.
+If we don't know anything about implementation and we want to provide some features then
+we should go with interfaces.
+
+Example:
+
+RBI
+ |
+interface ATM{
+abstract balanceEnquiry();
+abstract withDraw();
+abstract miniStatement();
+}
+
+class IcIcATM implements ATM{
+balanceEnquiry(){
+
+}
+withDraw(){
+
+}
+miniStatement(){
+
+}
+}
+
+class SbiATM implements ATM{
+balanceEnquiry(){
+
+}
+withDraw(){
+
+}
+miniStatement(){
+
+}
+}
+
+class AxisATM implements ATM{
+balanceEnquiry(){
+
+}
+withDraw(){
+
+}
+miniStatement(){
+
+}
+}
+
+
+To create Servlet
+
+1. Servlet Interface
+2. GenericServlet class
+3. HttpServlet
+
+extends Thread vs implements Runnable.
+
+class MyThread extend Thread{
+    public void run(){
+
+    }
+
+}
+
+class MyThread implements Runnable extends Employee{
+ public void run(){
+
+    }
+}
+
+How many ways we create a thread :
+2 ways:
+    a. extend Thread
+    b. implements Runnable interface
+
+ in both the cases we need to override run()
+
+which is the best way to create thread ?
+using implements Runnable interface, because if we use
+extend Thread class we cant extend any other class.
+If we implements Runnable then we can extend a class.
+
+How to create a thread using extend Thread class?
+
+class Thread1 extends Thread {
+
+    public void run(){
+    // actual logic
+    }
+}
+
+Thread1 t1= new Thread1();
+t1.start() ---> start method interally create a thread and calls run();
+
+How to create a thread using implements Runnable interface ?
+
+class MyThread implements Runnable{
+public void run(){
+    // actual logic
+    }
+}
+
+MyThread m= new MyThread();
+
+Thread t= new Thread(m);
+t.start();
+
+what happens if you directly call a run() method?
+
+when we call a run() method, it will not create any new thread, and it will run() like a normal method.
+
+
+
+
+
